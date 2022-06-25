@@ -9,7 +9,7 @@ $audioLineNumber = Select-String -Path index.html -Pattern "https://stream.zeno.
 
 if($audioLineNumber-1 -eq -1 ){
     # Audio player script
-    $textToAdd = '<div class="mb-4"><audio controls autoplay><source src="https://stream.zeno.fm/h4cwrur8uwzuv" type="audio/ogg">Your browser does not support the audio element.</audio></div>'
+    $textToAdd = '<div class="mb-4"><audio controls><source src="https://stream.zeno.fm/h4cwrur8uwzuv" type="audio/ogg">Your browser does not support the audio element.</audio></div>'
     
     # Append content to line number
     $fileContent = Get-Content $filePath
